@@ -14,6 +14,7 @@ struct Node {
 	vector<Edge> adj;
 	int x;
 	int y;
+	long long dijkD;
 };
 
 Node* gr=0;
@@ -30,28 +31,25 @@ struct PQ {
 	int maxsz=-1;
 };
 
-void deletePQ(PQ p) {
+void deletePQ(PQ& p) {
 	free(p.a);
 	p.sz=0;
 	p.maxsz=-1;
 }
 
-void initPQ(PQ p, int maxnum) {
+void initPQ(PQ& p, int maxnum) {
 	deletePQ(p);
 	p.a=(QE*)malloc(sizeof(QE)*maxnum+1);
 	p.maxsz=maxnum;
 }
 
 void swap(QE* a, int i, int k) {
-	void* temp1=a[i].val;
-	long long temp2=a[i].t;
-	a[i].val=a[k].val;
-	a[i].t=a[k].t;
-	a[k].val=temp1;
-	a[k].t=temp2;
+	QE temp=a[i];
+	a[i]=a[k];
+	a[k]=temp;
 }
 
-void heapUp(PQ p, int i) {
+void heapUp(PQ& p, int i) {
 	while (i>1) {
 		if (p.a[i].t<p.a[i/2].t) {
 			swap(p.a,i,i/2);
@@ -62,13 +60,13 @@ void heapUp(PQ p, int i) {
 	}
 }
 
-void heapDown(PQ p, int i) {
+void heapDown(PQ& p, int i) {
 	while (i*2<=p.sz) {
 		if (i*2+1<=p.sz && p.a[i*2+1].t<p.a[i].t && p.a[i*2+1].t<=p.a[i*2].t) {
-			p.a[i]=p.a[i*2+1];
+			swap(p.a,i,i*2+1);
 			i=i*2+1;
 		} else if (p.a[i*2].t<p.a[i].t) {
-			p.a[i]=p.a[i*2];
+			swap(p.a,i,i*2);
 			i*=2;
 		} else {
 			return;
@@ -76,7 +74,15 @@ void heapDown(PQ p, int i) {
 	}
 }
 
-void push(PQ p, long long t, void* v) {
+void printHeap(PQ& p) {
+	cout<<"Heap contents: ";
+	for (int i=1; i<=p.sz; i++) {
+		cout<<((Node*)p.a[i].val)->id<<" ";
+	}
+	cout<<endl;
+}
+
+void push(PQ& p, long long t, void* v) {
 	if (p.sz==p.maxsz) {
 		cout<<"Error too many PQ elements\n";
 		return;
@@ -84,16 +90,53 @@ void push(PQ p, long long t, void* v) {
 	p.a[p.sz+1].t=t;
 	p.a[p.sz+1].val=v;
 	p.sz++;
-	heapUp(p,p.sz+2);
+	heapUp(p,p.sz);
 }
 
-QE pop(PQ p) {
+QE pop(PQ& p) {
 	if (p.sz==0) {
 		cout<<"Nothing in the pq\n";
 	}
 	QE ret=p.a[1];
+	p.a[1]=p.a[p.sz];
+	p.sz--;
 	heapDown(p,1);
+	
 	return ret;
+}
+
+long long dijkstra(int start, int end) {
+	for (int i=0; i<nodes; i++) {
+		gr[i].dijkD=1L<<60;
+	}
+	PQ p;
+	initPQ(p,nodes*4);
+	push(p,0,gr+start);
+	while (p.sz>0) {
+		QE q=pop(p);
+		//cout<<"p.sz="<<p.sz<<endl;
+		//cout<<"t="<<q.t<<endl;
+		Node* n=(Node*) q.val;
+		//cout<<q.val<<endl;
+		//cout<<n->id<<endl;
+		//printHeap(p);
+		if (q.t<=n->dijkD) {
+			if (n->id==end) {
+				deletePQ(p);
+				return q.t;
+			}
+			for (int i=0; i<n->adj.size(); i++) {
+				long long dt=q.t+n->adj[i].time;
+				if (dt<gr[n->adj[i].d].dijkD) {
+					gr[n->adj[i].d].dijkD=dt;
+					push(p,dt,gr+n->adj[i].d);
+					//cout<<"pushed "<<n->adj[i].d<<endl;
+					//printHeap(p);
+				}
+			}
+		}
+	}
+	return -1;
 }
 
 void readCoords(FILE* f) {
@@ -189,7 +232,16 @@ int main(int argc, char** argv) {
 	readDists(df);
 	//cout<<"hi"<<endl;
 	readTimes(tf);
-	
+	cout<<"Distances from node 7:\n";
+	for (int i=0; i<10; i++) {
+		cout<<"Node "<<i<<" distance "<<dijkstra(7,i)<<endl;
+	}
+	long long sum=0;
+	for (int i=0; i<nodes; i++) {
+		sum+=dijkstra(7,i);
+		if (i%1000==0) cout<<i<<endl;
+	}
+	cout<<"Average distance from node 7: "<<sum/(double)nodes<<endl;
 	fclose(cf);
 	fclose(df);
 	fclose(tf);

@@ -1,35 +1,10 @@
-#include <bits/stdc++.h>
+#include "core.h"
 
 using namespace std;
-
-struct Edge {
-	int s;
-	int d;
-	int time;
-	int dist;
-};
-
-struct Node {
-	int id;
-	vector<Edge> adj;
-	int x;
-	int y;
-	long long dijkD;
-};
 
 Node* gr=0;
 int nodes;
 
-struct QE {
-	void* val;
-	long long t;
-};
-
-struct PQ {
-	QE* a=0;
-	int sz=0;
-	int maxsz=-1;
-};
 
 void deletePQ(PQ& p) {
 	free(p.a);
@@ -39,7 +14,7 @@ void deletePQ(PQ& p) {
 
 void initPQ(PQ& p, int maxnum) {
 	deletePQ(p);
-	p.a=(QE*)malloc(sizeof(QE)*maxnum+1);
+	p.a=(QE*)malloc(sizeof(QE)*(maxnum+1));
 	p.maxsz=maxnum;
 }
 
@@ -109,24 +84,24 @@ long long dijkstra(int start, int end) {
 	for (int i=0; i<nodes; i++) {
 		gr[i].dijkD=1L<<60;
 	}
+	gr[start].dijkD=0;
 	PQ p;
 	initPQ(p,nodes*4);
 	push(p,0,gr+start);
+	
 	while (p.sz>0) {
 		QE q=pop(p);
-		//cout<<"p.sz="<<p.sz<<endl;
-		//cout<<"t="<<q.t<<endl;
+
 		Node* n=(Node*) q.val;
-		//cout<<q.val<<endl;
-		//cout<<n->id<<endl;
-		//printHeap(p);
+
 		if (q.t<=n->dijkD) {
 			if (n->id==end) {
 				deletePQ(p);
 				return q.t;
 			}
 			for (int i=0; i<n->adj.size(); i++) {
-				long long dt=q.t+n->adj[i].time;
+				//long long dt=q.t+n->adj[i].time;
+				long long dt=q.t+ (long long)(n->adj[i].time*(1L+n->adj[i].cars)/2);
 				if (dt<gr[n->adj[i].d].dijkD) {
 					gr[n->adj[i].d].dijkD=dt;
 					push(p,dt,gr+n->adj[i].d);
@@ -140,6 +115,7 @@ long long dijkstra(int start, int end) {
 }
 
 void readCoords(FILE* f) {
+	
 	char line[256];
 	while (fgets(line,256,f)) {
 		if (line[0]=='p') {
@@ -182,6 +158,7 @@ void readDists(FILE* f) {
 				e.s=x;
 				e.d=y;
 				e.dist=w;
+				e.cars=0;
 				gr[x].adj.push_back(e);
 			}
 		}
@@ -229,22 +206,13 @@ int main(int argc, char** argv) {
 		return 1;
 	}
 	readCoords(cf);
-	readDists(df);
-	//cout<<"hi"<<endl;
-	readTimes(tf);
-	cout<<"Distances from node 7:\n";
-	for (int i=0; i<10; i++) {
-		cout<<"Node "<<i<<" distance "<<dijkstra(7,i)<<endl;
-	}
-	long long sum=0;
-	for (int i=0; i<nodes; i++) {
-		sum+=dijkstra(7,i);
-		if (i%1000==0) cout<<i<<endl;
-	}
-	cout<<"Average distance from node 7: "<<sum/(double)nodes<<endl;
 	fclose(cf);
+	readDists(df);
 	fclose(df);
+	readTimes(tf);
 	fclose(tf);
+	
+	runSim(10000000);
 	
 	return 0;
 }

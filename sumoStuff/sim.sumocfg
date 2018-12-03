@@ -55,7 +55,7 @@
 
     <time>
         <begin value="0" synonymes="b" type="TIME" help="Defines the begin time; The simulation starts at this time"/>
-        <end value="100000" synonymes="e" type="TIME" help="Defines the end time; The simulation ends at this time"/>
+        <end value="100" synonymes="e" type="TIME" help="Defines the end time; The simulation ends at this time"/>
         <step-length value="1" type="TIME" help="Defines the step duration"/>
     </time>
 

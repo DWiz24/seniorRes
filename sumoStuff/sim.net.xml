@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Wed 28 Nov 2018 09:55:51 AM EST by Netedit Version 0.25.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netedit.exeConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/afs/csl.tjhsst.edu/students/2019/2019dwisdom/seniorRes/sumoStuff/sim.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/afs/csl.tjhsst.edu/students/2019/2019dwisdom/seniorRes/sumoStuff/sim.net.xml"/>
+    </output>
+
+    <processing>
+        <no-turnarounds value="true"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+        <junctions.corner-detail value="0"/>
+    </processing>
+
+</configuration>
+-->
+
+<net version="0.25" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-633.35,-628.33,640.55,625.94" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id=":downSink_0" function="internal">
+        <lane id=":downSink_0_0" index="0" speed="11.176" length="0.10" shape="-11.65,-599.97 -11.65,-599.93"/>
+    </edge>
+    <edge id=":downSource_0" function="internal">
+        <lane id=":downSource_0_0" index="0" speed="11.176" length="0.18" shape="11.66,-599.97 11.65,-599.79"/>
+    </edge>
+    <edge id=":intersect_0" function="internal">
+        <lane id=":intersect_0_0" index="0" speed="11.176" length="5.08" shape="4.89,1.73 3.49,1.91 2.49,2.48 1.91,3.46 1.73,4.83"/>
+    </edge>
+    <edge id=":intersect_1" function="internal">
+        <lane id=":intersect_1_0" index="0" speed="11.176" length="9.72" shape="4.89,1.73 -4.83,1.73"/>
+    </edge>
+    <edge id=":intersect_2" function="internal">
+        <lane id=":intersect_2_0" index="0" speed="11.176" length="5.49" shape="4.89,1.73 2.03,1.28 -0.02,0.04 -0.13,-0.13"/>
+    </edge>
+    <edge id=":intersect_12" function="internal">
+        <lane id=":intersect_12_0" index="0" speed="11.176" length="5.06" shape="-0.13,-0.13 -1.28,-2.00 -1.73,-4.83"/>
+    </edge>
+    <edge id=":intersect_3" function="internal">
+        <lane id=":intersect_3_0" index="0" speed="11.176" length="5.08" shape="1.73,-4.89 1.91,-3.49 2.48,-2.49 3.46,-1.91 4.83,-1.73"/>
+    </edge>
+    <edge id=":intersect_4" function="internal">
+        <lane id=":intersect_4_0" index="0" speed="11.176" length="9.72" shape="1.73,-4.89 1.73,4.83"/>
+    </edge>
+    <edge id=":intersect_5" function="internal">
+        <lane id=":intersect_5_0" index="0" speed="11.176" length="5.49" shape="1.73,-4.89 1.28,-2.03 0.04,0.02 -0.13,0.13"/>
+    </edge>
+    <edge id=":intersect_13" function="internal">
+        <lane id=":intersect_13_0" index="0" speed="11.176" length="5.06" shape="-0.13,0.13 -2.00,1.28 -4.83,1.73"/>
+    </edge>
+    <edge id=":intersect_6" function="internal">
+        <lane id=":intersect_6_0" index="0" speed="11.176" length="5.08" shape="-4.89,-1.73 -3.49,-1.91 -2.49,-2.48 -1.91,-3.46 -1.73,-4.83"/>
+    </edge>
+    <edge id=":intersect_7" function="internal">
+        <lane id=":intersect_7_0" index="0" speed="11.176" length="9.72" shape="-4.89,-1.73 4.83,-1.73"/>
+    </edge>
+    <edge id=":intersect_8" function="internal">
+        <lane id=":intersect_8_0" index="0" speed="11.176" length="5.49" shape="-4.89,-1.73 -2.03,-1.28 0.02,-0.04 0.13,0.13"/>
+    </edge>
+    <edge id=":intersect_14" function="internal">
+        <lane id=":intersect_14_0" index="0" speed="11.176" length="5.06" shape="0.13,0.13 1.28,2.00 1.73,4.83"/>
+    </edge>
+    <edge id=":intersect_9" function="internal">
+        <lane id=":intersect_9_0" index="0" speed="11.176" length="5.04" shape="-1.73,4.83 -1.90,3.46 -2.48,2.48 -3.46,1.90 -4.83,1.73"/>
+    </edge>
+    <edge id=":intersect_10" function="internal">
+        <lane id=":intersect_10_0" index="0" speed="11.176" length="9.66" shape="-1.73,4.83 -1.73,-4.83"/>
+    </edge>
+    <edge id=":intersect_11" function="internal">
+        <lane id=":intersect_11_0" index="0" speed="11.176" length="5.45" shape="-1.73,4.83 -1.28,2.00 -0.04,-0.04 0.13,-0.14"/>
+    </edge>
+    <edge id=":intersect_15" function="internal">
+        <lane id=":intersect_15_0" index="0" speed="11.176" length="5.06" shape="0.13,-0.14 2.00,-1.28 4.83,-1.73"/>
+    </edge>
+    <edge id=":leftSink_0" function="internal">
+        <lane id=":leftSink_0_0" index="0" speed="11.176" length="0.10" shape="-599.97,11.65 -599.92,11.65"/>
+    </edge>
+    <edge id=":leftSource_0" function="internal">
+        <lane id=":leftSource_0_0" index="0" speed="11.176" length="0.10" shape="-599.88,-11.65 -599.97,-11.65"/>
+    </edge>
+    <edge id=":rightSink_0" function="internal">
+        <lane id=":rightSink_0_0" index="0" speed="11.176" length="0.10" shape="599.98,-11.65 599.99,-11.65"/>
+    </edge>
+    <edge id=":rightSource_0" function="internal">
+        <lane id=":rightSource_0_0" index="0" speed="11.176" length="0.10" shape="599.93,11.65 599.97,11.65"/>
+    </edge>
+    <edge id=":upSink_0" function="internal">
+        <lane id=":upSink_0_0" index="0" speed="11.176" length="0.10" shape="11.65,600.02 11.65,600.02"/>
+    </edge>
+    <edge id=":upSource_0" function="internal">
+        <lane id=":upSource_0_0" index="0" speed="11.176" length="0.10" shape="-11.65,599.98 -11.65,599.97"/>
+    </edge>
+
+    <edge id="dIn" from="downSource" to="intersect" priority="1">
+        <lane id="dIn_0" index="0" speed="11.176" length="594.99" shape="11.65,-599.79 1.73,-4.89"/>
+    </edge>
+    <edge id="dOut" from="intersect" to="downSink" priority="1">
+        <lane id="dOut_0" index="0" speed="11.176" length="595.22" shape="-1.73,-4.83 -11.65,-599.97"/>
+    </edge>
+    <edge id="dSi" from="downSink" to="gneJ5" priority="1">
+        <lane id="dSi_0" index="0" speed="11.176" length="28.36" shape="-11.65,-599.93 -12.86,-628.26"/>
+    </edge>
+    <edge id="dSo" from="gneJ4" to="downSource" priority="1" shape="13.55,-627.85 10.00,-600.00">
+        <lane id="dSo_0" index="0" speed="11.176" length="27.90" shape="15.19,-627.64 11.66,-599.97"/>
+    </edge>
+    <edge id="lIn" from="leftSource" to="intersect" priority="1">
+        <lane id="lIn_0" index="0" speed="11.176" length="595.17" shape="-599.97,-11.65 -4.89,-1.73"/>
+    </edge>
+    <edge id="lOut" from="intersect" to="leftSink" priority="1">
+        <lane id="lOut_0" index="0" speed="11.176" length="595.22" shape="-4.83,1.73 -599.97,11.65"/>
+    </edge>
+    <edge id="lSi" from="leftSink" to="gneJ6" priority="1">
+        <lane id="lSi_0" index="0" speed="11.176" length="31.04" shape="-599.92,11.65 -630.92,13.18"/>
+    </edge>
+    <edge id="lSo" from="gneJ7" to="leftSource" priority="1" shape="-633.35,-12.39 -600.00,-10.00">
+        <lane id="lSo_0" index="0" speed="11.176" length="33.44" shape="-633.23,-14.04 -599.88,-11.65"/>
+    </edge>
+    <edge id="rIn" from="rightSource" to="intersect" priority="1">
+        <lane id="rIn_0" index="0" speed="11.176" length="595.17" shape="599.97,11.65 4.89,1.73"/>
+    </edge>
+    <edge id="rOut" from="intersect" to="rightSink" priority="1">
+        <lane id="rOut_0" index="0" speed="11.176" length="595.23" shape="4.83,-1.73 599.98,-11.65"/>
+    </edge>
+    <edge id="rSi" from="rightSink" to="gneJ3" priority="1">
+        <lane id="rSi_0" index="0" speed="11.176" length="39.01" shape="599.99,-11.65 639.00,-11.84"/>
+    </edge>
+    <edge id="rSo" from="gneJ0" to="rightSource" priority="1">
+        <lane id="rSo_0" index="0" speed="11.176" length="40.58" shape="640.48,13.32 599.93,11.65"/>
+    </edge>
+    <edge id="uIn" from="upSource" to="intersect" priority="1">
+        <lane id="uIn_0" index="0" speed="11.176" length="595.22" shape="-11.65,599.97 -1.73,4.83"/>
+    </edge>
+    <edge id="uOut" from="intersect" to="upSink" priority="1">
+        <lane id="uOut_0" index="0" speed="11.176" length="595.27" shape="1.73,4.83 11.65,600.02"/>
+    </edge>
+    <edge id="uSi" from="upSink" to="uSinkNode" priority="1">
+        <lane id="uSi_0" index="0" speed="11.176" length="25.94" shape="11.65,600.02 11.32,625.96"/>
+    </edge>
+    <edge id="uSo" from="gneJ9" to="upSource" priority="1" shape="-10.02,624.06 -10.00,600.00">
+        <lane id="uSo_0" index="0" speed="11.176" length="24.08" shape="-11.67,624.06 -11.65,599.98"/>
+    </edge>
+
+    <tlLogic id="intersect" type="static" programID="0" offset="0">
+        <phase duration="31" state="GGgsrrGGgsrr"/>
+        <phase duration="4" state="yygsrryygsrr"/>
+        <phase duration="6" state="rrGsrrrrGsrr"/>
+        <phase duration="4" state="rrysrrrrysrr"/>
+        <phase duration="31" state="srrGGgsrrGGg"/>
+        <phase duration="4" state="srryygsrryyg"/>
+        <phase duration="6" state="srrrrGsrrrrG"/>
+        <phase duration="4" state="srrrrysrrrry"/>
+    </tlLogic>
+
+    <junction id="downSink" type="unregulated" x="-10.00" y="-600.00" incLanes="dOut_0" intLanes=":downSink_0_0" shape="-13.25,-599.94 -10.05,-599.99 -13.25,-599.87"/>
+    <junction id="downSource" type="unregulated" x="10.00" y="-600.00" incLanes="dSo_0" intLanes=":downSource_0_0" shape="13.25,-599.77 10.07,-600.17 10.05,-599.82 13.25,-599.77"/>
+    <junction id="gneJ0" type="unregulated" x="640.55" y="11.68" incLanes="" intLanes="" shape="640.54,11.73 640.41,14.92"/>
+    <junction id="gneJ3" type="unregulated" x="639.01" y="-10.19" incLanes="rSi_0" intLanes="" shape="639.00,-13.44 639.01,-10.24"/>
+    <junction id="gneJ4" type="unregulated" x="13.55" y="-627.85" incLanes="" intLanes="" shape="13.60,-627.85 16.77,-627.44"/>
+    <junction id="gneJ5" type="unregulated" x="-11.21" y="-628.33" incLanes="dSi_0" intLanes="" shape="-14.46,-628.19 -11.26,-628.33"/>
+    <junction id="gneJ6" type="unregulated" x="-631.00" y="11.53" incLanes="lSi_0" intLanes="" shape="-630.84,14.77 -631.00,11.58"/>
+    <junction id="gneJ7" type="unregulated" x="-633.35" y="-12.39" incLanes="" intLanes="" shape="-633.34,-12.44 -633.12,-15.63"/>
+    <junction id="gneJ9" type="unregulated" x="-10.02" y="624.06" incLanes="" intLanes="" shape="-10.07,624.06 -13.27,624.06"/>
+    <junction id="intersect" type="traffic_light_right_on_red" x="0.00" y="0.00" incLanes="rIn_0 dIn_0 lIn_0 uIn_0" intLanes=":intersect_0_0 :intersect_1_0 :intersect_12_0 :intersect_3_0 :intersect_4_0 :intersect_13_0 :intersect_6_0 :intersect_7_0 :intersect_14_0 :intersect_9_0 :intersect_10_0 :intersect_15_0" shape="0.13,4.86 3.33,4.81 4.91,3.33 4.81,-3.33 3.33,-4.91 -3.33,-4.81 -4.91,-3.33 -4.81,3.33 -3.33,4.81 -0.13,4.86">
+        <request index="0" response="000000010000" foes="000100010000" cont="0"/>
+        <request index="1" response="000000000000" foes="111100110000" cont="0"/>
+        <request index="2" response="000011000000" foes="110011110000" cont="1"/>
+        <request index="3" response="000010000000" foes="100010000000" cont="0"/>
+        <request index="4" response="000110000111" foes="100110000111" cont="0"/>
+        <request index="5" response="011110000110" foes="011110000110" cont="1"/>
+        <request index="6" response="010000000000" foes="010000000100" cont="0"/>
+        <request index="7" response="000000000000" foes="110000111100" cont="0"/>
+        <request index="8" response="000000000011" foes="110000110011" cont="1"/>
+        <request index="9" response="000000000010" foes="000000100010" cont="0"/>
+        <request index="10" response="000111000110" foes="000111100110" cont="0"/>
+        <request index="11" response="000110011110" foes="000110011110" cont="1"/>
+    </junction>
+    <junction id="leftSink" type="unregulated" x="-600.00" y="10.00" incLanes="lOut_0" intLanes=":leftSink_0_0" shape="-599.95,13.25 -600.00,10.05 -599.84,13.25"/>
+    <junction id="leftSource" type="unregulated" x="-600.00" y="-10.00" incLanes="lSo_0" intLanes=":leftSource_0_0" shape="-599.91,-10.05 -599.86,-13.25 -600.09,-10.06"/>
+    <junction id="rightSink" type="unregulated" x="600.00" y="-10.00" incLanes="rOut_0" intLanes=":rightSink_0_0" shape="599.99,-10.05 599.97,-13.25 600.01,-10.05"/>
+    <junction id="rightSource" type="unregulated" x="600.00" y="10.00" incLanes="rSo_0" intLanes=":rightSource_0_0" shape="599.87,13.25 600.00,10.05 599.94,13.25"/>
+    <junction id="uSinkNode" type="unregulated" x="9.67" y="625.94" incLanes="uSi_0" intLanes="" shape="12.92,625.98 9.72,625.94"/>
+    <junction id="upSink" type="unregulated" x="10.00" y="600.00" incLanes="uOut_0" intLanes=":upSink_0_0" shape="13.25,599.99 10.05,600.04 13.25,600.00"/>
+    <junction id="upSource" type="unregulated" x="-10.00" y="600.00" incLanes="uSo_0" intLanes=":upSource_0_0" shape="-13.25,599.98 -10.05,599.98 -13.25,599.97"/>
+
+    <junction id=":intersect_12_0" type="internal" x="-0.13" y="-0.13" incLanes=":intersect_2_0 lIn_0" intLanes=":intersect_4_0 :intersect_5_0 :intersect_6_0 :intersect_7_0 :intersect_10_0 :intersect_11_0"/>
+    <junction id=":intersect_13_0" type="internal" x="-0.13" y="0.13" incLanes=":intersect_5_0 uIn_0" intLanes=":intersect_1_0 :intersect_2_0 :intersect_7_0 :intersect_8_0 :intersect_9_0 :intersect_10_0"/>
+    <junction id=":intersect_14_0" type="internal" x="0.13" y="0.13" incLanes=":intersect_8_0 rIn_0" intLanes=":intersect_0_0 :intersect_1_0 :intersect_4_0 :intersect_5_0 :intersect_10_0 :intersect_11_0"/>
+    <junction id=":intersect_15_0" type="internal" x="0.13" y="-0.14" incLanes=":intersect_11_0 dIn_0" intLanes=":intersect_1_0 :intersect_2_0 :intersect_3_0 :intersect_4_0 :intersect_7_0 :intersect_8_0"/>
+
+    <connection from="dIn" to="rOut" fromLane="0" toLane="0" via=":intersect_3_0" tl="intersect" linkIndex="3" dir="r" state="o"/>
+    <connection from="dIn" to="uOut" fromLane="0" toLane="0" via=":intersect_4_0" tl="intersect" linkIndex="4" dir="s" state="o"/>
+    <connection from="dIn" to="lOut" fromLane="0" toLane="0" via=":intersect_5_0" tl="intersect" linkIndex="5" dir="l" state="o"/>
+    <connection from="dOut" to="dSi" fromLane="0" toLane="0" via=":downSink_0_0" dir="s" state="M"/>
+    <connection from="dSo" to="dIn" fromLane="0" toLane="0" via=":downSource_0_0" dir="s" state="M"/>
+    <connection from="lIn" to="dOut" fromLane="0" toLane="0" via=":intersect_6_0" tl="intersect" linkIndex="6" dir="r" state="o"/>
+    <connection from="lIn" to="rOut" fromLane="0" toLane="0" via=":intersect_7_0" tl="intersect" linkIndex="7" dir="s" state="o"/>
+    <connection from="lIn" to="uOut" fromLane="0" toLane="0" via=":intersect_8_0" tl="intersect" linkIndex="8" dir="l" state="o"/>
+    <connection from="lOut" to="lSi" fromLane="0" toLane="0" via=":leftSink_0_0" dir="s" state="M"/>
+    <connection from="lSo" to="lIn" fromLane="0" toLane="0" via=":leftSource_0_0" dir="s" state="M"/>
+    <connection from="rIn" to="uOut" fromLane="0" toLane="0" via=":intersect_0_0" tl="intersect" linkIndex="0" dir="r" state="o"/>
+    <connection from="rIn" to="lOut" fromLane="0" toLane="0" via=":intersect_1_0" tl="intersect" linkIndex="1" dir="s" state="o"/>
+    <connection from="rIn" to="dOut" fromLane="0" toLane="0" via=":intersect_2_0" tl="intersect" linkIndex="2" dir="l" state="o"/>
+    <connection from="rOut" to="rSi" fromLane="0" toLane="0" via=":rightSink_0_0" dir="s" state="M"/>
+    <connection from="rSo" to="rIn" fromLane="0" toLane="0" via=":rightSource_0_0" dir="s" state="M"/>
+    <connection from="uIn" to="lOut" fromLane="0" toLane="0" via=":intersect_9_0" tl="intersect" linkIndex="9" dir="r" state="o"/>
+    <connection from="uIn" to="dOut" fromLane="0" toLane="0" via=":intersect_10_0" tl="intersect" linkIndex="10" dir="s" state="o"/>
+    <connection from="uIn" to="rOut" fromLane="0" toLane="0" via=":intersect_11_0" tl="intersect" linkIndex="11" dir="l" state="o"/>
+    <connection from="uOut" to="uSi" fromLane="0" toLane="0" via=":upSink_0_0" dir="s" state="M"/>
+    <connection from="uSo" to="uIn" fromLane="0" toLane="0" via=":upSource_0_0" dir="s" state="M"/>
+
+    <connection from=":downSink_0" to="dSi" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":downSource_0" to="dIn" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_0" to="uOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_1" to="lOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_2" to="dOut" fromLane="0" toLane="0" via=":intersect_12_0" dir="s" state="m"/>
+    <connection from=":intersect_12" to="dOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_3" to="rOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_4" to="uOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_5" to="lOut" fromLane="0" toLane="0" via=":intersect_13_0" dir="s" state="m"/>
+    <connection from=":intersect_13" to="lOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_6" to="dOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_7" to="rOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_8" to="uOut" fromLane="0" toLane="0" via=":intersect_14_0" dir="s" state="m"/>
+    <connection from=":intersect_14" to="uOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_9" to="lOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_10" to="dOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":intersect_11" to="rOut" fromLane="0" toLane="0" via=":intersect_15_0" dir="s" state="m"/>
+    <connection from=":intersect_15" to="rOut" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":leftSink_0" to="lSi" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":leftSource_0" to="lIn" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":rightSink_0" to="rSi" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":rightSource_0" to="rIn" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":upSink_0" to="uSi" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":upSource_0" to="uIn" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

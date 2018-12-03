@@ -1,0 +1,15 @@
+<routes>
+   <vType id="basicV" accel="0.8" decel="4.5" sigma="0.5" length="5" maxSpeed="80"/>
+	<flow id="f23" color="1,1,0"  probability="0.05" type="basicV" from="lSo" to="dSi"/>
+	<flow id="f21" color="1,1,0"  probability="0.05" type="basicV" from="lSo" to="uSi"/>
+	<flow id="f20" color="1,1,0"  probability="0.05" type="basicV" from="lSo" to="rSi"/>
+	<flow id="f13" color="1,1,0"  probability="0.05" type="basicV" from="uSo" to="dSi"/>
+	<flow id="f12" color="1,1,0"  probability="0.05" type="basicV" from="uSo" to="lSi"/>
+	<flow id="f10" color="1,1,0"  probability="0.05" type="basicV" from="uSo" to="rSi"/>
+	<flow id="f32" color="1,1,0"  probability="0.05" type="basicV" from="dSo" to="lSi"/>
+	<flow id="f31" color="1,1,0"  probability="0.05" type="basicV" from="dSo" to="uSi"/>
+	<flow id="f30" color="1,1,0"  probability="0.05" type="basicV" from="dSo" to="rSi"/>
+	<flow id="f01" color="1,1,0"  probability="0.05" type="basicV" from="rSo" to="uSi"/>
+	<flow id="f02" color="1,1,0"  probability="0.05" type="basicV" from="rSo" to="lSi"/>
+	<flow id="f03" color="1,1,0"  probability="0.05" type="basicV" from="rSo" to="dSi"/>
+</routes>

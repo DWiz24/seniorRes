@@ -31,7 +31,7 @@ int inside(Node* n) {
 }
 
 void dfs(int s) {
-	if (gr[s].dijkD!=-1 && inside(gr+s)) {
+	if (gr[s].dijkD==-1 && inside(gr+s)) {
 		gr[s].dijkD=1;
 		for (int i=0; i<gr[s].adj.size(); i++) {
 			dfs(gr[s].adj[i].d);
@@ -41,7 +41,7 @@ void dfs(int s) {
 
 void writeSubgraph() {
 	for (int i=0; i<nodes; i++) {
-		dijkD[i]=-1;
+		gr[i].dijkD=-1;
 	}
 	int target=-1;
 	while (target==-1 || !inside(gr+target)) {
@@ -52,13 +52,13 @@ void writeSubgraph() {
 	FILE* cords=fopen("Sectc.co","w");
 	int count=0;
 	for (int i=0; i<nodes; i++) {
-		if (dijkD!=-1 && inside(gr+i)) {
+		if (gr[i].dijkD!=-1 && inside(gr+i)) {
 			count++;
 		}
 	}
 	fprintf(cords,"p nodenumaa %d\n",count);
 	for (int i=0; i<nodes; i++) {
-		if (dijkD!=-1 && inside(gr+i)) {
+		if (gr[i].dijkD!=-1 && inside(gr+i)) {
 			gr[i].dijkD=p;
 			fprintf(cords,"v %d %d %d\n",p,gr[i].x,gr[i].y);
 			p++;
@@ -69,10 +69,10 @@ void writeSubgraph() {
 	FILE* df=fopen("Sectd.gr","w");
 	FILE* tf=fopen("Sectt.gr","w");
 	for (int i=0; i<nodes; i++) {
-		if (dijkD!=-1 && inside(gr+i)) {
+		if (gr[i].dijkD!=-1 && inside(gr+i)) {
 			for (int j=0; j<gr[i].adj.size(); j++) {
 				int dn=(gr[i].adj[j].d);
-				if (dijkD!=-1 && inside(gr+dn)) {
+				if (gr[i].dijkD!=-1 && inside(gr+dn)) {
 					fprintf(df,"a %lld %lld %d\n",gr[i].dijkD,gr[dn].dijkD,gr[i].adj[j].dist);
 					fprintf(tf,"a %lld %lld %d\n",gr[i].dijkD,gr[dn].dijkD,gr[i].adj[j].time);
 				}
